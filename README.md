@@ -11,14 +11,14 @@ Before you begin, ensure you have the following installed:
 ## Steps to Set Up and Run the Project
 
 - IOS: 
-yarn
-yarn pod
-yarn start
-yarn xcode
+yarn -> 
+yarn pod -> 
+yarn start -> 
+yarn xcode -> 
 command + B (run app)
 
 - Android:
-yarn
+yarn -> 
 yarn android
 
 
