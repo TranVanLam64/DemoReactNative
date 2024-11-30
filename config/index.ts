@@ -5,7 +5,11 @@ const config: ResourceConfig = {
         Common: {
             logo_app: require("./image/logo_app.png"),
             image_coconut: require("./image/coconut.png"),
+            image_coconut_gray: require("./image/coconut-gray.png"),
+            image_coconut_white: require("./image/coconut-white.png"),
+            image_coconut_black: require("./image/coconut-black.png"),
             image_home: require("./image/icon_home.png"),
+            image_history: require("./image/image-history.png"),
             image_user: require("./image/user-circle.png"),
             image_nav_home: require("./image/Nav-bid.png"),
             image_nav_home_active: require("./image/Nav-bid-active.png"),
@@ -14,7 +18,11 @@ const config: ResourceConfig = {
             image_nav_payment: require("./image//Nav-shop.png"),
             image_nav_payment_active: require("./image/Nav-shop-active.png"),
             image_nav_profile: require("./image/Nav-sccount.png"),
-            image_nav_profile_active: require("./image/Nav-sccount-active.png")
+            image_nav_profile_active: require("./image/Nav-sccount-active.png"),
+            image_currency_euro: require("./image/currency-euro.png"),
+            image_bank_note: require("./image/banknotes.png"),
+            image_setting: require("./image/cog-6-tooth.png"),
+            image_left_arrow_long: require("./image/arrow-long-left.png")
         },
         Login: {
             image_login: require("./image/image-intro.png"),
@@ -32,6 +40,13 @@ const config: ResourceConfig = {
         Term: {
             image_term: require("./image/image-term.png"),
             image_check: require("./image/check.png"),
+        },
+        Product: {
+            image_product: require("./image/image-product.png"),
+            image_calendar: require("./image/calendar-days.png"),
+            image_calendar_fill: require("./image/calendar-days-fill.png"),
+            image_hamer_fill: require("./image/hamer-fill.png"),
+            image_user_avatar: require("./image/user-avatar.png")
         }
     }
 }

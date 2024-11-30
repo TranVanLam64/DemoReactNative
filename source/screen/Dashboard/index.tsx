@@ -5,6 +5,8 @@ import { Constants } from "../../main"
 import Home from "../Home"
 import Story from "../Story"
 import { TabBar } from "../../component"
+import Payment from "../Payment"
+import Profile from "../Profile"
 
 const Tab = createBottomTabNavigator()
 
@@ -39,12 +41,12 @@ const Dashboard = () => {
           />
           <Tab.Screen
             name={Constants.Screen.Payment}
-            component={Home}
+            component={Payment}
             options={commonNavigationOption}
           />
           <Tab.Screen
             name={Constants.Screen.Profile}
-            component={Home}
+            component={Profile}
             options={commonNavigationOption}
           />
         </>

@@ -1,12 +1,15 @@
-import React from 'react'
-import { Text, View } from 'react-native'
-import { ToolBar } from '../../component'
+import React from "react"
+import { ScrollView } from "react-native"
+import { ProductList, ToolBar } from "../../component"
+import config from "../../../config"
 
 const Home = () => {
   return (
     <>
-      <ToolBar />
-      <Text>Home</Text>
+      <ToolBar title="Enchères à venir" icon={config.Icon.Common.image_home} />
+      <ScrollView>
+        <ProductList history={false} />
+      </ScrollView>
     </>
   )
 }

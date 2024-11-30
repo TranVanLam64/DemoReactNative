@@ -29,7 +29,7 @@ export default function App() {
   return (
     <View style={styles.flex1}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName={Constants.Screen.Login} screenOptions={{
+        <Stack.Navigator initialRouteName={Constants.Screen.Dashboard} screenOptions={{
           contentStyle: {
             backgroundColor: Constants.Color.AppColor
           }

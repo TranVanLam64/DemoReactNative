@@ -5,7 +5,11 @@ export interface ResourceConfig {
         Common: {
             logo_app: ImageSourcePropType
             image_coconut: ImageSourcePropType
+            image_coconut_gray: ImageSourcePropType
+            image_coconut_white: ImageSourcePropType
+            image_coconut_black: ImageSourcePropType
             image_home: ImageSourcePropType
+            image_history: ImageSourcePropType
             image_user: ImageSourcePropType
             image_nav_home: ImageSourcePropType
             image_nav_home_active: ImageSourcePropType
@@ -15,6 +19,10 @@ export interface ResourceConfig {
             image_nav_payment_active: ImageSourcePropType
             image_nav_profile: ImageSourcePropType
             image_nav_profile_active: ImageSourcePropType
+            image_currency_euro: ImageSourcePropType
+            image_bank_note: ImageSourcePropType
+            image_setting: ImageSourcePropType
+            image_left_arrow_long: ImageSourcePropType
         }
         Login: {
             image_login: ImageSourcePropType
@@ -32,6 +40,13 @@ export interface ResourceConfig {
         Term: {
             image_term: ImageSourcePropType
             image_check: ImageSourcePropType
+        },
+        Product: {
+            image_product: ImageSourcePropType,
+            image_calendar: ImageSourcePropType
+            image_calendar_fill: ImageSourcePropType
+            image_hamer_fill: ImageSourcePropType
+            image_user_avatar: ImageSourcePropType
         }
     }
 }

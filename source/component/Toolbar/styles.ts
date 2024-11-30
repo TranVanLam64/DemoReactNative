@@ -80,9 +80,10 @@ export default StyleSheet.create({
     },
     lineX: {
         borderColor: "#FFFFFF1A",
-        borderWidth: 2,
+        borderWidth: 1,
         height: 0,
         width: "100%",
-        marginTop: 18
+        marginTop: 18,
+        marginBottom: 6
     }
 })
