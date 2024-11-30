@@ -9,9 +9,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { enableScreens } from 'react-native-screens';
 import { NavigationContainer } from '@react-navigation/native';
-import { Detail, Home } from '../screen';
-import { SafeAreaView, View } from 'react-native';
+import { Dashboard, Login, Term } from '../screen';
+import { View } from 'react-native';
 import Reactotron from './ReactoronConfig'
+import Constants from './Constants';
+import styles from './styles';
 
 enableScreens()
 const Stack = createNativeStackNavigator();
@@ -25,12 +27,16 @@ export default function App() {
   Reactotron.log('App is loading');
 
   return (
-    <View style={{flex: 1}}>
-      <SafeAreaView></SafeAreaView>
+    <View style={styles.flex1}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={Home} options={commonNavigationOption} />
-          <Stack.Screen name="Detail" component={Detail} options={commonNavigationOption} />
+        <Stack.Navigator initialRouteName={Constants.Screen.Login} screenOptions={{
+          contentStyle: {
+            backgroundColor: Constants.Color.AppColor
+          }
+        }}>
+          <Stack.Screen name={Constants.Screen.Login} component={Login} options={commonNavigationOption} />
+          <Stack.Screen name={Constants.Screen.Term} component={Term} options={commonNavigationOption} />
+          <Stack.Screen name={Constants.Screen.Dashboard} component={Dashboard} options={commonNavigationOption} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

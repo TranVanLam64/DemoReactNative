@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "905729071849",
+    "project_id": "fir-react-native-f2f63",
+    "storage_bucket": "fir-react-native-f2f63.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905729071849:android:042d85b9c25a5b0e7c6e78",
+        "android_client_info": {
+          "package_name": "com.demo.reactnative"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUOk7VCbz-MzikZxO-0BD26olMH7dtNdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905729071849:android:9175ecf49b726b837c6e78",
+        "android_client_info": {
+          "package_name": "com.demoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUOk7VCbz-MzikZxO-0BD26olMH7dtNdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
