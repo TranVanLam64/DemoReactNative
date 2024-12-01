@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react"
 import { Dimensions, View } from "react-native"
-import Constants, { DateRelease, Product } from "../../main/Constants";
-import ProductCard from "../ProductCard";
-import styles from "./styles";
+import Constants, { DateRelease, Product } from "../../main/Constants"
+import ProductCard from "../ProductCard"
+import styles from "./styles"
 
 interface ProductListInterface {
-    history: boolean
+  history: boolean
 }
 
-const ProductList = ({ history } : ProductListInterface) => {
+const ProductList = ({ history }: ProductListInterface) => {
   const [combinedData, setCombinedData] = useState<
     (Product | { type: string; title: string })[]
   >([])

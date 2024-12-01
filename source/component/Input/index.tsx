@@ -1,10 +1,5 @@
 import React from "react"
-import {
-  Image,
-  Text,
-  View,
-  TextInput
-} from "react-native"
+import { Image, Text, View, TextInput } from "react-native"
 import styles from "./styles"
 import {
   ImageSourcePropType,

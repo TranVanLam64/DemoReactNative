@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
-import fonts from "../../config/font";
+import { StyleSheet } from "react-native"
+import fonts from "../../config/font"
 
 export default StyleSheet.create({
-    fontMontserratBold: fonts.fontMontserratBold,
-    fontMontserratRegular: fonts.fontMontserratRegular
+  fontMontserratBold: fonts.fontMontserratBold,
+  fontMontserratRegular: fonts.fontMontserratRegular,
 })

@@ -7,6 +7,6 @@ export default StyleSheet.create({
     lineHeight: 16,
     color: "#4ABF40",
     position: "absolute",
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
 })

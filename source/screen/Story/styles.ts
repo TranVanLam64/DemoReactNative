@@ -1,7 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from "react-native"
 
 export default StyleSheet.create({
-    contentContainerStyle: {
-        paddingBottom: 200
-    }
+  contentContainerStyle: {
+    paddingBottom: 200,
+  },
 })

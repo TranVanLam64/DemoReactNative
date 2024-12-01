@@ -11,8 +11,8 @@ import Profile from "../Profile"
 const Tab = createBottomTabNavigator()
 
 const commonNavigationOption: any = {
-    headerShown: false,
-    gestureEnabled: true
+  headerShown: false,
+  gestureEnabled: true,
 }
 
 const Dashboard = () => {
@@ -22,10 +22,10 @@ const Dashboard = () => {
         initialRouteName={Constants.Screen.Home}
         tabBar={(props) => <TabBar {...props} />}
         screenOptions={{
-            sceneStyle: {
-                backgroundColor: Constants.Color.AppColor,
-                paddingHorizontal: 12
-            }
+          sceneStyle: {
+            backgroundColor: Constants.Color.AppColor,
+            paddingHorizontal: 12,
+          },
         }}
       >
         <>

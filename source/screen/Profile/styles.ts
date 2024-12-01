@@ -15,7 +15,7 @@ export default StyleSheet.create({
     fontSize: 14,
     lineHeight: 20,
     marginLeft: 4,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   textTitleGray: {
     color: "#56698F",
@@ -40,13 +40,13 @@ export default StyleSheet.create({
     fontSize: 14,
     lineHeight: 16,
     marginBottom: 6,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   progressDesc: {
     color: "#fff",
     fontSize: 12,
     lineHeight: 16,
-    ...Style.fontMontserratRegular
+    ...Style.fontMontserratRegular,
   },
   icon24: {
     width: 24,
@@ -64,7 +64,7 @@ export default StyleSheet.create({
     lineHeight: 12,
     color: "#fff",
     marginBottom: 10,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   infoLeftAvatar: {
     width: 108,
@@ -111,7 +111,7 @@ export default StyleSheet.create({
     lineHeight: 20,
     color: "#fff",
     marginLeft: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   wrapperButton: {
     marginTop: 24,

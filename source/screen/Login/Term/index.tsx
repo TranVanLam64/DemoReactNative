@@ -18,10 +18,18 @@ const Term = () => {
         </View>
       ))}
       <View style={styles.checkBoxContainer}>
-        <TouchableOpacity style={[styles.checkBox, isCheck ? styles.checkBoxChecked : styles.checkBoxUnChecked]} onPress={() => setIsCheck(!isCheck)}>
+        <TouchableOpacity
+          style={[
+            styles.checkBox,
+            isCheck ? styles.checkBoxChecked : styles.checkBoxUnChecked,
+          ]}
+          onPress={() => setIsCheck(!isCheck)}
+        >
           {isCheck && <Image source={config.Icon.Term.image_check} />}
         </TouchableOpacity>
-        <Text style={styles.checkBoxText}>J’accepte les conditions de{"\n"}l’application</Text>
+        <Text style={styles.checkBoxText}>
+          J’accepte les conditions de{"\n"}l’application
+        </Text>
       </View>
       <ButtonWrapper
         onBack={() => navigation.goBack}

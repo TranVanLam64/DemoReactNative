@@ -11,7 +11,7 @@ export default StyleSheet.create({
   loginImage: {
     width: 256,
     height: 256,
-    alignSelf: "center"
+    alignSelf: "center",
   },
   loginHeroText: {
     marginBottom: 48,
@@ -21,7 +21,7 @@ export default StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 32,
     lineHeight: 44,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   imageHero: {
     width: 320,
@@ -78,28 +78,28 @@ export default StyleSheet.create({
   iconInput: {
     width: 20,
     height: 20,
-    marginRight: 8
+    marginRight: 8,
   },
   labelInput: {
     fontSize: 10,
     lineHeight: 12,
     color: "#fff",
     marginBottom: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   mb24: {
-    marginBottom: 24
+    marginBottom: 24,
   },
   textInput: {
     fontSize: 12,
     lineHeight: 16,
     width: "100%",
     flex: 1,
-    ...Style.fontMontserratRegular
+    ...Style.fontMontserratRegular,
   },
   buttonLoginEmailContainer: {
     marginTop: 44,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   buttonBack: {
     width: 56,
@@ -111,7 +111,7 @@ export default StyleSheet.create({
   },
   iconBack: {
     width: 24,
-    height: 24
+    height: 24,
   },
   buttonSubmit: {
     flexDirection: "row",
@@ -119,30 +119,30 @@ export default StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#4ABF40",
     borderRadius: 8,
-    flex: 1
+    flex: 1,
   },
   buttonSubmitDisable: {
-    backgroundColor: "#56698F1A"
+    backgroundColor: "#56698F1A",
   },
   textButtonSubmit: {
     color: "#fff",
     fontSize: 16,
     lineHeight: 20,
     marginRight: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   textButtonSubmitDisable: {
-    color: "#56698F80"
+    color: "#56698F80",
   },
   containerPagination: {
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    alignSelf: "flex-end"
+    alignSelf: "flex-end",
   },
   dotWrapper: {
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
   },
   dot: {
     backgroundColor: "#56698F",
@@ -152,10 +152,10 @@ export default StyleSheet.create({
     marginRight: 16,
   },
   mr0: {
-    marginRight: 0
+    marginRight: 0,
   },
   dotActive: {
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
   buttonNext: {
     justifyContent: "center",
@@ -163,7 +163,7 @@ export default StyleSheet.create({
     backgroundColor: "#4ABF40",
     width: 56,
     height: 56,
-    borderRadius: 8
+    borderRadius: 8,
   },
   buttonBackSlide: {
     width: 56,
@@ -177,6 +177,6 @@ export default StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     color: "#fff",
-    ...Style.fontMontserratRegular
-  }
+    ...Style.fontMontserratRegular,
+  },
 })

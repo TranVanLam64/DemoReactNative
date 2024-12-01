@@ -14,7 +14,7 @@ import { Constants, Global, Setting } from "../../main"
 import { useNavigation } from "@react-navigation/native"
 
 const Profile = () => {
-    const navigation = useNavigation()
+  const navigation = useNavigation()
   const renderProgressSection = () => {
     return (
       <View style={styles.progressWrapper}>

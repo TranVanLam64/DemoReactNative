@@ -1,4 +1,4 @@
-import { EventEmitter } from 'events';
+import { EventEmitter } from "events"
 
-const EventBus = new EventEmitter();
-export default EventBus;
+const EventBus = new EventEmitter()
+export default EventBus

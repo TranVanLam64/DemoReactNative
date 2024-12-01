@@ -15,7 +15,7 @@ export default StyleSheet.create({
     lineHeight: 24,
     color: "#fff",
     marginLeft: 6,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   titleIcon: {
     width: 24,
@@ -40,7 +40,7 @@ export default StyleSheet.create({
     lineHeight: 16,
     color: "#fff",
     marginVertical: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   wrapperPrice: {
     alignItems: "center",
@@ -53,14 +53,14 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: "#fff",
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   priceText: {
     fontSize: 16,
     lineHeight: 24,
     color: "#fff",
     marginTop: 4,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   priceCoconutWrapper: {
     flexDirection: "row",
@@ -71,7 +71,7 @@ export default StyleSheet.create({
     lineHeight: 12,
     color: "#FFFFFF80",
     marginRight: 2,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   priceCoconutIcon: {
     width: 12,
@@ -92,7 +92,7 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: "#1F2332",
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   pointWrapper: {
     flexDirection: "row",
@@ -107,7 +107,7 @@ export default StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
     color: "#fff",
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   pointIcon: {
     width: 16,
@@ -178,7 +178,7 @@ export default StyleSheet.create({
     backgroundColor: "#00000080",
     width: "100%",
     padding: 4,
-    paddingBottom: 8
+    paddingBottom: 8,
   },
   wrapperUserInfo: {
     flexDirection: "row",
@@ -192,14 +192,15 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: "#ABB7CE",
-    ...Style.fontMontserratRegular
+    ...Style.fontMontserratRegular,
   },
   userStatusPay: {
-    fontSize: 10, lineHeight: 12,
+    fontSize: 10,
+    lineHeight: 12,
     color: "#fff",
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 4,
-    ...Style.fontMontserratBold
-  }
+    ...Style.fontMontserratBold,
+  },
 })

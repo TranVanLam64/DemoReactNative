@@ -22,7 +22,7 @@ export default StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     marginRight: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   buttonHeaderIcon: {
     width: 24,
@@ -42,7 +42,7 @@ export default StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     marginRight: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   containerPayment: {
     borderRadius: 24,
@@ -56,19 +56,19 @@ export default StyleSheet.create({
   },
   paymentTopImage: {
     width: 128,
-    height: 128
+    height: 128,
   },
   containerPaymentBottom: {
     backgroundColor: "#2F374B",
     alignItems: "center",
-    padding: 16
-},
-paymentBottomTitle: {
+    padding: 16,
+  },
+  paymentBottomTitle: {
     color: "#fff",
     fontSize: 18,
     lineHeight: 20,
     marginBottom: 12,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   paymentBottomDesc: {
     color: "#fff",
@@ -76,7 +76,7 @@ paymentBottomTitle: {
     lineHeight: 16,
     marginHorizontal: 8,
     marginBottom: 24,
-    ...Style.fontMontserratRegular
+    ...Style.fontMontserratRegular,
   },
   wrapperPoint: {
     backgroundColor: "#FFFFFF33",
@@ -85,38 +85,38 @@ paymentBottomTitle: {
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 16,
-    marginBottom: 16
+    marginBottom: 16,
   },
   wrapperTextIcon: {
     flexDirection: "row",
     alignItems: "center",
-},
-pointCoconut: {
+  },
+  pointCoconut: {
     color: "#FFFFFF",
     fontSize: 28,
     lineHeight: 32,
     marginRight: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   icon32: {
     width: 32,
-    height: 32
+    height: 32,
   },
   pointPlusCoconut: {
     color: "#FFFFFF80",
     fontSize: 12,
     lineHeight: 16,
     marginRight: 4,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   icon16: {
     width: 16,
-    height: 16
+    height: 16,
   },
   wrapperQuantity: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 16
+    marginBottom: 16,
   },
   buttonQuantity: {
     backgroundColor: "#fff",
@@ -124,13 +124,13 @@ pointCoconut: {
     alignItems: "center",
     paddingVertical: 12,
     borderRadius: 6,
-    flex: 1
-},
-buttonQuantityText: {
+    flex: 1,
+  },
+  buttonQuantityText: {
     color: "#1F2332",
-    fontSize: 28, 
+    fontSize: 28,
     lineHeight: 32,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   wrapperQuantityValue: {
     flexDirection: "row",
@@ -138,14 +138,14 @@ buttonQuantityText: {
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 12,
-    flex: 1
-},
-wrapperQuantityValueText: {
+    flex: 1,
+  },
+  wrapperQuantityValueText: {
     color: "#fff",
-    fontSize: 28, 
+    fontSize: 28,
     lineHeight: 32,
     marginRight: 8,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   wrapperButtonSubmit: {
     flexDirection: "row",
@@ -154,17 +154,17 @@ wrapperQuantityValueText: {
     width: "100%",
     backgroundColor: "#4ABF40",
     borderRadius: 6,
-    paddingVertical: 16
+    paddingVertical: 16,
   },
   buttonSubmitText: {
     color: "#fff",
-    fontSize: 16, 
+    fontSize: 16,
     lineHeight: 20,
     marginRight: 45,
-    ...Style.fontMontserratBold
-},
-icon24: {
+    ...Style.fontMontserratBold,
+  },
+  icon24: {
     width: 24,
-    height: 24
-}
+    height: 24,
+  },
 })

@@ -50,10 +50,10 @@ const Login = () => {
   //   try {
   //     // Lấy thông tin người dùng từ Google
   //     const { idToken } = await GoogleSignin.signIn();
-      
+
   //     // Tạo credential cho Firebase
   //     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-      
+
   //     // Đăng nhập Firebase
   //     const userCredential = await auth().signInWithCredential(googleCredential);
 
@@ -116,7 +116,11 @@ const Login = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <ButtonWrapper onBack={() => setIsShowLoginEmail(false)} onSubmit={onSubmit} spaceButton={24} />
+        <ButtonWrapper
+          onBack={() => setIsShowLoginEmail(false)}
+          onSubmit={onSubmit}
+          spaceButton={24}
+        />
       </View>
     )
   }

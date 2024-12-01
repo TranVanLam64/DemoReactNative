@@ -10,7 +10,7 @@ export default StyleSheet.create({
     lineHeight: 12,
     color: "#fff",
     marginBottom: 6,
-    ...Style.fontMontserratBold
+    ...Style.fontMontserratBold,
   },
   inputView: {
     alignItems: "center",
@@ -29,7 +29,7 @@ export default StyleSheet.create({
     lineHeight: 16,
     marginHorizontal: 8,
     textAlignVertical: "center",
-    ...Style.fontMontserratRegular
+    ...Style.fontMontserratRegular,
   },
   flexRow: {
     flexDirection: "row",

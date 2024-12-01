@@ -20,17 +20,34 @@ interface ButtonFullProps {
   onPress: () => void
 }
 
-const ButtonFull = ({ text, icon, isReverse, isCenter, customStyle, textStyle, onPress }: ButtonFullProps) => {
+const ButtonFull = ({
+  text,
+  icon,
+  isReverse,
+  isCenter,
+  customStyle,
+  textStyle,
+  onPress,
+}: ButtonFullProps) => {
   return (
     <TouchableOpacity
       style={[
         styles.wrapperButton,
         isReverse && { flexDirection: "row-reverse" },
-        customStyle
+        customStyle,
       ]}
       onPress={onPress}
     >
-      <Text style={[styles.buttonText, textStyle, (isCenter && isReverse) && { marginLeft: 8, marginRight: 0 }, (isCenter && !isReverse) && { marginRight: 8, marginLeft: 0 }]}>{text}</Text>
+      <Text
+        style={[
+          styles.buttonText,
+          textStyle,
+          isCenter && isReverse && { marginLeft: 8, marginRight: 0 },
+          isCenter && !isReverse && { marginRight: 8, marginLeft: 0 },
+        ]}
+      >
+        {text}
+      </Text>
       <Image style={styles.icon24} source={icon} />
     </TouchableOpacity>
   )
