@@ -21,6 +21,9 @@ yarn xcode ->
 yarn start -> 
 command + B (run app)
 
+- Android(if not auto open emulator or metro):
+yarn -> open emulator in android studio -> yarn start -> yarn android
+
 - Android:
 yarn -> 
 yarn android
