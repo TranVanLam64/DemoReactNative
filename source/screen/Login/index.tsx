@@ -28,9 +28,10 @@ import { useNavigation } from "@react-navigation/native"
 const Login = () => {
   const navigation = useNavigation()
   const [isShowLoginEmail, setIsShowLoginEmail] = useState(false)
-  const [isShowSlide, setIsShowSlide] = useState(false)
+  const [isShowSlide, setIsShowSlide] = useState(true)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
   const [isShowPassword, setIsShowPassword] = useState(false)
   const arrayDot = new Array(5).fill(0)
   const [slideActive, setSlideActive] = useState(0)
@@ -44,24 +45,23 @@ const Login = () => {
       setIsShowSlide(true)
       Global.isLogin = true
       Setting.set(Constants.Event.isLogin, true)
+    } else {
+      setEmail("")
+      setPassword("")
+      setErrorMessage("Mauvais email ou mot de passe")
     }
   }
 
   // const onGoogleButtonPress = async () => {
   //   try {
-  //     // Lấy thông tin người dùng từ Google
   //     const { idToken } = await GoogleSignin.signIn();
 
-  //     // Tạo credential cho Firebase
   //     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
-  //     // Đăng nhập Firebase
   //     const userCredential = await auth().signInWithCredential(googleCredential);
 
-  //     Alert.alert('Thành công!', `Chào ${userCredential.user.displayName}`);
   //   } catch (error) {
   //     console.error(error);
-  //     Alert.alert('Lỗi!', 'Không thể đăng nhập.');
   //   }
   // };
 
@@ -78,6 +78,16 @@ const Login = () => {
     )
   }
 
+  const onChangeEmail = (value: string) => {
+    setEmail(value)
+    setErrorMessage("")
+  }
+
+  const onChangePassword = (value: string) => {
+    setPassword(value)
+    setErrorMessage("")
+  }
+
   const renderLoginEmail = () => {
     return (
       <View style={styles.inputContainer}>
@@ -90,7 +100,8 @@ const Login = () => {
             />
             <TextInput
               style={styles.textInput}
-              onChangeText={(value) => setEmail(value)}
+              onChangeText={(value) => onChangeEmail(value)}
+              value={email}
               placeholder="Adresse@mail.com"
               placeholderTextColor={"#56698F"}
             />
@@ -104,7 +115,8 @@ const Login = () => {
               source={config.Icon.Login.image_key}
             />
             <TextInput
-              onChangeText={(value) => setPassword(value)}
+              onChangeText={(value) => onChangePassword(value)}
+              value={password}
               secureTextEntry={!isShowPassword}
               style={styles.textInput}
               placeholder="Motdepasse"
@@ -117,6 +129,9 @@ const Login = () => {
             </TouchableOpacity>
           </View>
         </View>
+        {errorMessage && (
+          <Text style={styles.errorMessage}>{errorMessage}</Text>
+        )}
         <ButtonWrapper
           onBack={() => setIsShowLoginEmail(false)}
           onSubmit={onSubmit}
@@ -132,7 +147,7 @@ const Login = () => {
     isShowTextImage: boolean
   ) => {
     return (
-      <View style={{ alignItems: "flex-start", width: "100%" }}>
+      <View style={styles.heroIntro}>
         <Image style={styles.loginImage} source={image} />
         <View style={styles.loginHeroText}>
           <Text style={styles.textHero}>{text}</Text>
@@ -192,7 +207,10 @@ const Login = () => {
   const renderSlide = () => {
     return (
       <View
-        style={{ flex: 1, justifyContent: "space-between", paddingBottom: 136 }}
+        style={[
+          styles.slideWrapper,
+          Platform.OS == "android" && { paddingBottom: 10 },
+        ]}
       >
         <Text style={styles.textSlide}>
           {Constants.SlideMock[slideActive].textSlide}
@@ -241,8 +259,36 @@ const Login = () => {
     }
   }
 
-  return (
-    <ScrollView contentContainerStyle={(Platform.OS == 'android' && !isShowSlide) ? styles.padding40 : {}}>
+  return isShowSlide ? (
+    <KeyboardAwareScrollView
+      bounces={false}
+      scrollEnabled={false}
+      resetScrollToCoords={{ x: 0, y: 0 }}
+      contentContainerStyle={[
+        styles.container,
+        Platform.OS == "android" && { paddingTop: 40 },
+      ]}
+      keyboardShouldPersistTaps="handled"
+      enableOnAndroid={true}
+      keyboardOpeningTime={0}
+      enableAutomaticScroll={true}
+      extraScrollHeight={Platform.OS === "android" ? 80 : 40}
+    >
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <>
+          {renderHeroIntro(
+            isShowSlide
+              ? Constants.SlideMock[slideActive].textHero
+              : "Créer un compte",
+            Constants.SlideMock[slideActive].image,
+            Constants.SlideMock[slideActive].isShowTextImage
+          )}
+          {renderMainContainer()}
+        </>
+      </TouchableWithoutFeedback>
+    </KeyboardAwareScrollView>
+  ) : (
+    <ScrollView>
       <KeyboardAwareScrollView
         bounces={false}
         scrollEnabled={false}

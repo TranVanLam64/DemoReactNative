@@ -60,6 +60,7 @@ export default StyleSheet.create({
   },
   inputContainer: {
     width: "100%",
+    marginTop: -6
   },
   inputWrapper: {
     width: "100%",
@@ -180,6 +181,20 @@ export default StyleSheet.create({
     ...Style.fontMontserratRegular,
   },
   padding40: {
-    paddingBottom: 40
-  }
+    paddingBottom: 40,
+  },
+  errorMessage: {
+    marginTop: 6,
+    marginBottom: -18,
+    fontSize: 10,
+    lineHeight: 12,
+    color: "#EE2F2F",
+    ...Style.fontMontserratBold,
+  },
+  slideWrapper: {
+    flex: 1,
+    justifyContent: "space-between",
+    paddingBottom: 136,
+  },
+  heroIntro: { alignItems: "flex-start", width: "100%" },
 })
