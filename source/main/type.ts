@@ -1,4 +1,4 @@
-import { ImageSourcePropType } from "react-native"
+import { ImageSourcePropType, StyleProp } from "react-native"
 
 export interface ResourceConfig {
   Icon: {

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import Style from "../../common/Style"
 
 export default StyleSheet.create({
   wrapperTitle: {
@@ -13,9 +14,8 @@ export default StyleSheet.create({
   textTitle: {
     fontSize: 14,
     lineHeight: 20,
-    fontWeight: "bold",
-
     marginLeft: 4,
+    ...Style.fontMontserratBold
   },
   textTitleGray: {
     color: "#56698F",
@@ -39,13 +39,14 @@ export default StyleSheet.create({
     color: "#fff",
     fontSize: 14,
     lineHeight: 16,
-    fontWeight: "bold",
     marginBottom: 6,
+    ...Style.fontMontserratBold
   },
   progressDesc: {
     color: "#fff",
     fontSize: 12,
     lineHeight: 16,
+    ...Style.fontMontserratRegular
   },
   icon24: {
     width: 24,
@@ -62,8 +63,8 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: "#fff",
-    fontWeight: "bold",
     marginBottom: 10,
+    ...Style.fontMontserratBold
   },
   infoLeftAvatar: {
     width: 108,
@@ -109,8 +110,8 @@ export default StyleSheet.create({
     fontSize: 18,
     lineHeight: 20,
     color: "#fff",
-    fontWeight: "bold",
     marginLeft: 8,
+    ...Style.fontMontserratBold
   },
   wrapperButton: {
     marginTop: 24,

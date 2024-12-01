@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Style from "../../../common/Style";
 
 export default StyleSheet.create({
     termContainer: {
@@ -24,7 +25,7 @@ export default StyleSheet.create({
     itemTextTerm: {
         fontSize: 16,
         lineHeight: 24,
-        fontWeight: "bold"
+        ...Style.fontMontserratBold
     },
     checkBoxContainer: {
         flexDirection: "row",
@@ -53,6 +54,7 @@ export default StyleSheet.create({
         fontSize: 16,
         lineHeight: 24,
         color: "#fff",
-        top: -3
+        top: -3,
+        ...Style.fontMontserratRegular
     }
 })

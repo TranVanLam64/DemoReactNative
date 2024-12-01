@@ -3,6 +3,7 @@ import { ToolBar } from "../../component"
 import config from "../../../config"
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native"
 import styles from "./styles"
+import { Constants } from "../../main"
 
 const Payment = () => {
     const [quantity, setQuantity] = useState(25)
@@ -33,7 +34,7 @@ const Payment = () => {
     return (
       <View style={styles.wrapperButtonHeader}>
         <TouchableOpacity style={styles.buttonHeaderLeft}>
-          <Text style={styles.buttonHeaderLeftText}>43</Text>
+          <Text style={styles.buttonHeaderLeftText}>{Constants.PaymentMock.coconutClaim}</Text>
           <Image
             style={styles.buttonHeaderIcon}
             source={config.Icon.Common.image_coconut_white}
@@ -65,14 +66,14 @@ const Payment = () => {
           </Text>
           <TouchableOpacity style={styles.wrapperPoint}>
             <View style={styles.wrapperTextIcon}>
-              <Text style={styles.pointCoconut}>2500</Text>
+              <Text style={styles.pointCoconut}>{Constants.PaymentMock.coconutPoint}</Text>
               <Image
                 style={styles.icon32}
                 source={config.Icon.Common.image_coconut_white}
               />
             </View>
             <View style={styles.wrapperTextIcon}>
-              <Text style={styles.pointPlusCoconut}>+ 200</Text>
+              <Text style={styles.pointPlusCoconut}>+ {Constants.PaymentMock.coconutPlus}</Text>
               <Image
                 style={styles.icon16}
                 source={config.Icon.Common.image_coconut_gray}

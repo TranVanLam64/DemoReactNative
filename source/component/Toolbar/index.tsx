@@ -24,10 +24,12 @@ const ToolBar = ({ title, icon, isProfile = false }: ToolBarProps) => {
   const [slideActive, setSlideActive] = useState(1)
 
   const onGoToProfile = () => {
-    if(!isProfile) {
-      navigation.navigate(Constants.Screen.Dashboard, { screen: Constants.Screen.Profile })
+    if (!isProfile) {
+      EventBus.emit(Constants.Event.goToProfile)
+      navigation.navigate(Constants.Screen.Dashboard, {
+        screen: Constants.Screen.Profile,
+      })
     }
-    EventBus.emit(Constants.Event.goToProfile)
   }
 
   return (
@@ -37,7 +39,9 @@ const ToolBar = ({ title, icon, isProfile = false }: ToolBarProps) => {
         <Image style={styles.logo} source={config.Icon.Common.logo_app} />
         <View style={styles.headerRight}>
           <View style={styles.headerRightCoconut}>
-            <Text style={styles.headerRightText}>43</Text>
+            <Text style={styles.headerRightText}>
+              {Constants.PaymentMock.coconutClaim}
+            </Text>
             <Image
               style={styles.iconCoconut}
               source={config.Icon.Common.image_coconut}

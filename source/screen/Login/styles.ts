@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import Style from "../../common/Style"
 
 export default StyleSheet.create({
   container: {
@@ -83,8 +84,8 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: "#fff",
-    fontWeight: "bold",
-    marginBottom: 8
+    marginBottom: 8,
+    ...Style.fontMontserratBold
   },
   mb24: {
     marginBottom: 24
@@ -93,7 +94,8 @@ export default StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
     width: "100%",
-    flex: 1
+    flex: 1,
+    ...Style.fontMontserratRegular
   },
   buttonLoginEmailContainer: {
     marginTop: 44,
@@ -126,8 +128,8 @@ export default StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     lineHeight: 20,
-    fontWeight: "bold",
-    marginRight: 8
+    marginRight: 8,
+    ...Style.fontMontserratBold
   },
   textButtonSubmitDisable: {
     color: "#56698F80"
@@ -175,5 +177,6 @@ export default StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     color: "#fff",
+    ...Style.fontMontserratRegular
   }
 })

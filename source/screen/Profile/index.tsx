@@ -5,6 +5,7 @@ import {
   ImageSourcePropType,
   ScrollView,
   Text,
+  TouchableOpacity,
   View,
 } from "react-native"
 import config from "../../../config"
@@ -59,12 +60,12 @@ const Profile = () => {
                 style={styles.infoLeftImage}
                 source={config.Icon.Product.image_user_avatar}
               />
-              <View style={styles.infoLeftEditView}>
+              <TouchableOpacity style={styles.infoLeftEditView}>
                 <Image
                   style={styles.icon20}
                   source={config.Icon.Common.image_pencil_white}
                 />
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
           <View style={styles.flex1}>

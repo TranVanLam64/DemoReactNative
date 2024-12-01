@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Style from "../../common/Style";
 
 export default StyleSheet.create({
     toolBarContainer: {
@@ -72,7 +73,7 @@ export default StyleSheet.create({
         lineHeight: 24,
         color: "#fff",
         marginRight: 6,
-        fontWeight: "bold"
+        ...Style.fontMontserratBold
     },
     titleIcon: {
         width: 24,

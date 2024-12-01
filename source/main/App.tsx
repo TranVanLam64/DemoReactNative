@@ -24,7 +24,7 @@ export default function App() {
     gestureEnabled: true
   }
 
-  Reactotron.log('App is loading');
+  // Reactotron.log('App is loading');
 
   return (
     <View style={styles.flex1}>

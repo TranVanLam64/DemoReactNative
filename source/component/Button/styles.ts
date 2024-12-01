@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Style from "../../common/Style";
 
 export default StyleSheet.create({
     wrapperButton: {
@@ -14,8 +15,8 @@ export default StyleSheet.create({
         color: "#fff",
         fontSize: 16, 
         lineHeight: 20,
-        fontWeight: "bold", 
-        marginRight: 45
+        marginRight: 45,
+        ...Style.fontMontserratBold
     },
     icon24: {
         width: 24,

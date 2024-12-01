@@ -1,5 +1,5 @@
 import React from "react"
-import { Dimensions, Image, Text, View } from "react-native"
+import { Dimensions, Image, Text, TouchableOpacity, View } from "react-native"
 import styles from "./styles"
 import { Product } from "../../main/Constants"
 import config from "../../../config"
@@ -30,7 +30,7 @@ const ProductCard = ({ item, index, history }: ProductCardInterface) => {
     )
   }
   return (
-    <View
+    <TouchableOpacity
       style={[
         styles.productItem,
         { width: itemWidth, borderColor: borderColor },
@@ -134,7 +134,7 @@ const ProductCard = ({ item, index, history }: ProductCardInterface) => {
           <Text style={styles.userStatusPay}>{item.userPay.status}</Text>
         </View>
       )}
-    </View>
+    </TouchableOpacity>
   )
 }
 

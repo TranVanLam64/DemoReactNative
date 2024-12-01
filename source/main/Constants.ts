@@ -266,5 +266,10 @@ export default {
                 status: "Gagnant de l’enchère"
             }
         }
-    ] as Product[]
+    ] as Product[],
+    PaymentMock: {
+        coconutPoint: 2500,
+        coconutPlus: 200,
+        coconutClaim: 43
+    }
 }

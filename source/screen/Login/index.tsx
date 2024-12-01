@@ -18,11 +18,11 @@ import { Constants, Global, Setting } from "../../main"
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view"
 import { ButtonWrapper } from "./component"
 import { useNavigation } from "@react-navigation/native"
-import { GoogleSignin } from '@react-native-google-signin/google-signin';
+// import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
-GoogleSignin.configure({
-  webClientId: '905729071849-mb1hv8fmtikss0lnm5hbpscjnh49en29.apps.googleusercontent.com',
-});
+// GoogleSignin.configure({
+//   webClientId: '905729071849-mb1hv8fmtikss0lnm5hbpscjnh49en29.apps.googleusercontent.com',
+// });
 
 const Login = () => {
   const navigation = useNavigation()
@@ -46,23 +46,23 @@ const Login = () => {
     }
   }
 
-  const onGoogleButtonPress = async () => {
-    try {
-      // Lấy thông tin người dùng từ Google
-      const { idToken } = await GoogleSignin.signIn();
+  // const onGoogleButtonPress = async () => {
+  //   try {
+  //     // Lấy thông tin người dùng từ Google
+  //     const { idToken } = await GoogleSignin.signIn();
       
-      // Tạo credential cho Firebase
-      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+  //     // Tạo credential cho Firebase
+  //     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
       
-      // Đăng nhập Firebase
-      const userCredential = await auth().signInWithCredential(googleCredential);
+  //     // Đăng nhập Firebase
+  //     const userCredential = await auth().signInWithCredential(googleCredential);
 
-      Alert.alert('Thành công!', `Chào ${userCredential.user.displayName}`);
-    } catch (error) {
-      console.error(error);
-      Alert.alert('Lỗi!', 'Không thể đăng nhập.');
-    }
-  };
+  //     Alert.alert('Thành công!', `Chào ${userCredential.user.displayName}`);
+  //   } catch (error) {
+  //     console.error(error);
+  //     Alert.alert('Lỗi!', 'Không thể đăng nhập.');
+  //   }
+  // };
 
   const renderButtonLogin = (
     text: String,
@@ -91,6 +91,7 @@ const Login = () => {
               style={styles.textInput}
               onChangeText={(value) => setEmail(value)}
               placeholder="Adresse@mail.com"
+              placeholderTextColor={"#56698F"}
             />
           </View>
         </View>
@@ -106,6 +107,7 @@ const Login = () => {
               secureTextEntry={!isShowPassword}
               style={styles.textInput}
               placeholder="Motdepasse"
+              placeholderTextColor={"#56698F"}
             />
             <TouchableOpacity
               onPress={() => setIsShowPassword(!isShowPassword)}
@@ -146,7 +148,7 @@ const Login = () => {
         {renderButtonLogin(
           "Connection avec Google",
           config.Icon.Login.image_google,
-          () => onGoogleButtonPress()
+          () => {}
         )}
         <View style={styles.line}></View>
         {renderButtonLogin(

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import Style from "../../common/Style"
 
 export default StyleSheet.create({
   titleWrapper: {
@@ -12,9 +13,9 @@ export default StyleSheet.create({
   titleText: {
     fontSize: 16,
     lineHeight: 24,
-    fontWeight: "bold",
     color: "#fff",
     marginLeft: 6,
+    ...Style.fontMontserratBold
   },
   titleIcon: {
     width: 24,
@@ -37,9 +38,9 @@ export default StyleSheet.create({
   statusText: {
     fontSize: 12,
     lineHeight: 16,
-    fontWeight: "bold",
     color: "#fff",
     marginVertical: 8,
+    ...Style.fontMontserratBold
   },
   wrapperPrice: {
     alignItems: "center",
@@ -51,15 +52,15 @@ export default StyleSheet.create({
   priceShopText: {
     fontSize: 10,
     lineHeight: 12,
-    fontWeight: "bold",
     color: "#fff",
+    ...Style.fontMontserratBold
   },
   priceText: {
     fontSize: 16,
     lineHeight: 24,
-    fontWeight: "bold",
     color: "#fff",
     marginTop: 4,
+    ...Style.fontMontserratBold
   },
   priceCoconutWrapper: {
     flexDirection: "row",
@@ -68,9 +69,9 @@ export default StyleSheet.create({
   priceCoconutText: {
     fontSize: 10,
     lineHeight: 12,
-    fontWeight: "bold",
     color: "#FFFFFF80",
     marginRight: 2,
+    ...Style.fontMontserratBold
   },
   priceCoconutIcon: {
     width: 12,
@@ -91,7 +92,7 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: "#1F2332",
-    fontWeight: "bold",
+    ...Style.fontMontserratBold
   },
   pointWrapper: {
     flexDirection: "row",
@@ -105,8 +106,8 @@ export default StyleSheet.create({
   pointText: {
     fontSize: 12,
     lineHeight: 16,
-    fontWeight: "bold",
     color: "#fff",
+    ...Style.fontMontserratBold
   },
   pointIcon: {
     width: 16,
@@ -191,12 +192,14 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     color: "#ABB7CE",
+    ...Style.fontMontserratRegular
   },
   userStatusPay: {
     fontSize: 10, lineHeight: 12,
     color: "#fff",
     fontWeight: "bold",
     textAlign: "center",
-    marginTop: 4
+    marginTop: 4,
+    ...Style.fontMontserratBold
   }
 })

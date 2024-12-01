@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import Style from "../../common/Style"
 
 export default StyleSheet.create({
   inputWrapper: {
@@ -7,9 +8,9 @@ export default StyleSheet.create({
   inputLabel: {
     fontSize: 10,
     lineHeight: 12,
-    fontWeight: "bold",
     color: "#fff",
     marginBottom: 6,
+    ...Style.fontMontserratBold
   },
   inputView: {
     alignItems: "center",
@@ -28,6 +29,7 @@ export default StyleSheet.create({
     lineHeight: 16,
     marginHorizontal: 8,
     textAlignVertical: "center",
+    ...Style.fontMontserratRegular
   },
   flexRow: {
     flexDirection: "row",

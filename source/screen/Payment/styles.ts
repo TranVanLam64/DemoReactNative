@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import Style from "../../common/Style"
 
 export default StyleSheet.create({
   wrapperButtonHeader: {
@@ -21,7 +22,7 @@ export default StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     marginRight: 8,
-    fontWeight: "bold",
+    ...Style.fontMontserratBold
   },
   buttonHeaderIcon: {
     width: 24,
@@ -40,8 +41,8 @@ export default StyleSheet.create({
     color: "#1F2332",
     fontSize: 16,
     lineHeight: 20,
-    fontWeight: "bold",
     marginRight: 8,
+    ...Style.fontMontserratBold
   },
   containerPayment: {
     borderRadius: 24,
@@ -66,16 +67,16 @@ paymentBottomTitle: {
     color: "#fff",
     fontSize: 18,
     lineHeight: 20,
-    fontWeight: "bold",
-    marginBottom: 12
+    marginBottom: 12,
+    ...Style.fontMontserratBold
   },
   paymentBottomDesc: {
     color: "#fff",
     fontSize: 12,
     lineHeight: 16,
     marginHorizontal: 8,
-    fontWeight: "400",
-    marginBottom: 24
+    marginBottom: 24,
+    ...Style.fontMontserratRegular
   },
   wrapperPoint: {
     backgroundColor: "#FFFFFF33",
@@ -94,8 +95,8 @@ pointCoconut: {
     color: "#FFFFFF",
     fontSize: 28,
     lineHeight: 32,
-    fontWeight: "bold",
-    marginRight: 8
+    marginRight: 8,
+    ...Style.fontMontserratBold
   },
   icon32: {
     width: 32,
@@ -106,7 +107,7 @@ pointCoconut: {
     fontSize: 12,
     lineHeight: 16,
     marginRight: 4,
-    fontWeight: "bold"
+    ...Style.fontMontserratBold
   },
   icon16: {
     width: 16,
@@ -129,7 +130,7 @@ buttonQuantityText: {
     color: "#1F2332",
     fontSize: 28, 
     lineHeight: 32,
-    fontWeight: "bold"
+    ...Style.fontMontserratBold
   },
   wrapperQuantityValue: {
     flexDirection: "row",
@@ -143,8 +144,8 @@ wrapperQuantityValueText: {
     color: "#fff",
     fontSize: 28, 
     lineHeight: 32,
-    fontWeight: "bold",
-    marginRight: 8
+    marginRight: 8,
+    ...Style.fontMontserratBold
   },
   wrapperButtonSubmit: {
     flexDirection: "row",
@@ -159,8 +160,8 @@ wrapperQuantityValueText: {
     color: "#fff",
     fontSize: 16, 
     lineHeight: 20,
-    fontWeight: "bold", 
-    marginRight: 45
+    marginRight: 45,
+    ...Style.fontMontserratBold
 },
 icon24: {
     width: 24,

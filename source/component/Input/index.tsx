@@ -50,6 +50,7 @@ const InputCustom = ({
             !iconRight && { marginRight: 0 },
           ]}
           placeholder={placeholder}
+          placeholderTextColor={"#56698F"}
         />
         {iconRight && <Image style={styles.icon20} source={iconRight} />}
       </View>
