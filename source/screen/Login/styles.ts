@@ -179,4 +179,7 @@ export default StyleSheet.create({
     color: "#fff",
     ...Style.fontMontserratRegular,
   },
+  padding40: {
+    paddingBottom: 40
+  }
 })

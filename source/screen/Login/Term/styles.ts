@@ -2,8 +2,13 @@ import { StyleSheet } from "react-native"
 import Style from "../../../common/Style"
 
 export default StyleSheet.create({
-  termContainer: {
+  flex1: {
     flex: 1,
+  },
+  padding40: {
+    paddingBottom: 40,
+  },
+  termContainer: {
     paddingTop: 245,
     paddingHorizontal: 32,
     alignItems: "center",

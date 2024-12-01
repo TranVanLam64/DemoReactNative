@@ -28,7 +28,7 @@ export default StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
     marginHorizontal: 8,
-    textAlignVertical: "center",
+    alignItems: "center",
     ...Style.fontMontserratRegular,
   },
   flexRow: {

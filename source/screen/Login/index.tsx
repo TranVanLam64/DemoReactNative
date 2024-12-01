@@ -5,6 +5,7 @@ import {
   ImageSourcePropType,
   Keyboard,
   Platform,
+  ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
@@ -241,30 +242,32 @@ const Login = () => {
   }
 
   return (
-    <KeyboardAwareScrollView
-      bounces={false}
-      scrollEnabled={false}
-      resetScrollToCoords={{ x: 0, y: 0 }}
-      contentContainerStyle={styles.container}
-      keyboardShouldPersistTaps="handled"
-      enableOnAndroid={true}
-      keyboardOpeningTime={0}
-      enableAutomaticScroll={true}
-      extraScrollHeight={Platform.OS === "android" ? 80 : 40}
-    >
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <>
-          {renderHeroIntro(
-            isShowSlide
-              ? Constants.SlideMock[slideActive].textHero
-              : "Créer un compte",
-            Constants.SlideMock[slideActive].image,
-            Constants.SlideMock[slideActive].isShowTextImage
-          )}
-          {renderMainContainer()}
-        </>
-      </TouchableWithoutFeedback>
-    </KeyboardAwareScrollView>
+    <ScrollView contentContainerStyle={(Platform.OS == 'android' && !isShowSlide) ? styles.padding40 : {}}>
+      <KeyboardAwareScrollView
+        bounces={false}
+        scrollEnabled={false}
+        resetScrollToCoords={{ x: 0, y: 0 }}
+        contentContainerStyle={styles.container}
+        keyboardShouldPersistTaps="handled"
+        enableOnAndroid={true}
+        keyboardOpeningTime={0}
+        enableAutomaticScroll={true}
+        extraScrollHeight={Platform.OS === "android" ? 80 : 40}
+      >
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <>
+            {renderHeroIntro(
+              isShowSlide
+                ? Constants.SlideMock[slideActive].textHero
+                : "Créer un compte",
+              Constants.SlideMock[slideActive].image,
+              Constants.SlideMock[slideActive].isShowTextImage
+            )}
+            {renderMainContainer()}
+          </>
+        </TouchableWithoutFeedback>
+      </KeyboardAwareScrollView>
+    </ScrollView>
   )
 }
 
