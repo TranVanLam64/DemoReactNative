@@ -8,6 +8,10 @@ Before you begin, ensure you have the following installed:
 - **Xcode** (for iOS development)
 - **Android Studio** (for Android development)
 
+## Account
+- email: admin@gmail.com
+- password: 123456
+
 ## Steps to Set Up and Run the Project
 
 - IOS: 
