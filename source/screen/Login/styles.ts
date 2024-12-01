@@ -21,7 +21,7 @@ export default StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 32,
     lineHeight: 44,
-    fontWeight: "bold",
+    ...Style.fontAzoSansBold
   },
   imageHero: {
     width: 320,
@@ -50,6 +50,7 @@ export default StyleSheet.create({
   textButtonLogin: {
     fontSize: 18,
     lineHeight: 21.83,
+    ...Style.fontProductSansRegular
   },
   line: {
     width: 128,

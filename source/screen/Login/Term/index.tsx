@@ -17,20 +17,19 @@ const Term = () => {
             <Text style={styles.itemTextTerm}>{item}</Text>
           </View>
         ))}
-        <View style={styles.checkBoxContainer}>
-          <TouchableOpacity
+        <TouchableOpacity onPress={() => setIsCheck(!isCheck)} style={styles.checkBoxContainer}>
+          <View
             style={[
               styles.checkBox,
               isCheck ? styles.checkBoxChecked : styles.checkBoxUnChecked,
             ]}
-            onPress={() => setIsCheck(!isCheck)}
           >
             {isCheck && <Image source={config.Icon.Term.image_check} />}
-          </TouchableOpacity>
+          </View>
           <Text style={styles.checkBoxText}>
             J’accepte les conditions de{"\n"}l’application
           </Text>
-        </View>
+        </TouchableOpacity>
         <ButtonWrapper
           onBack={() => navigation.goBack}
           onSubmit={() => navigation.navigate(Constants.Screen.Dashboard)}

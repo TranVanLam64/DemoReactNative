@@ -28,7 +28,7 @@ import { useNavigation } from "@react-navigation/native"
 const Login = () => {
   const navigation = useNavigation()
   const [isShowLoginEmail, setIsShowLoginEmail] = useState(false)
-  const [isShowSlide, setIsShowSlide] = useState(true)
+  const [isShowSlide, setIsShowSlide] = useState(false)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
@@ -73,7 +73,7 @@ const Login = () => {
     return (
       <TouchableOpacity style={styles.buttonLogin} onPress={action}>
         <Image style={styles.iconButtonLogin} source={icon} />
-        <Text>{text}</Text>
+        <Text style={styles.textButtonLogin}>{text}</Text>
       </TouchableOpacity>
     )
   }
@@ -288,7 +288,7 @@ const Login = () => {
       </TouchableWithoutFeedback>
     </KeyboardAwareScrollView>
   ) : (
-    <ScrollView>
+    <ScrollView contentContainerStyle={Platform.OS == "android" ? styles.padding40 : {}}>
       <KeyboardAwareScrollView
         bounces={false}
         scrollEnabled={false}
