@@ -5,6 +5,7 @@ import Home from "./Home";
 import Story from "./Story";
 import Payment from "./Payment";
 import Profile from "./Profile";
+import Splash from "./Splash";
 
 export {
     Login,
@@ -13,5 +14,6 @@ export {
     Home,
     Story,
     Payment,
-    Profile
+    Profile,
+    Splash
 }

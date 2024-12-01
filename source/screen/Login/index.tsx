@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import {
+  Alert,
   Image,
   ImageSourcePropType,
   Keyboard,
@@ -17,6 +18,11 @@ import { Constants, Global, Setting } from "../../main"
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view"
 import { ButtonWrapper } from "./component"
 import { useNavigation } from "@react-navigation/native"
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
+
+GoogleSignin.configure({
+  webClientId: '905729071849-mb1hv8fmtikss0lnm5hbpscjnh49en29.apps.googleusercontent.com',
+});
 
 const Login = () => {
   const navigation = useNavigation()
@@ -39,6 +45,24 @@ const Login = () => {
       Setting.set(Constants.Event.isLogin, true)
     }
   }
+
+  const onGoogleButtonPress = async () => {
+    try {
+      // Lấy thông tin người dùng từ Google
+      const { idToken } = await GoogleSignin.signIn();
+      
+      // Tạo credential cho Firebase
+      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+      
+      // Đăng nhập Firebase
+      const userCredential = await auth().signInWithCredential(googleCredential);
+
+      Alert.alert('Thành công!', `Chào ${userCredential.user.displayName}`);
+    } catch (error) {
+      console.error(error);
+      Alert.alert('Lỗi!', 'Không thể đăng nhập.');
+    }
+  };
 
   const renderButtonLogin = (
     text: String,
@@ -122,7 +146,7 @@ const Login = () => {
         {renderButtonLogin(
           "Connection avec Google",
           config.Icon.Login.image_google,
-          () => {}
+          () => onGoogleButtonPress()
         )}
         <View style={styles.line}></View>
         {renderButtonLogin(

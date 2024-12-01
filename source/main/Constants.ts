@@ -37,7 +37,8 @@ export default {
         Home: "Home",
         Story: "Story",
         Payment: "Payment",
-        Profile: "Profile"
+        Profile: "Profile",
+        Splash: "Splash"
     },
 
     TabBar: [
