@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "pod": "cd ios && pod install --verbose && cd ..",
+    "pod": "cd ios && pod install && cd ..",
     "xcode": "open ios/DemoApp.xcworkspace"
   },
   "dependencies": {

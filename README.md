@@ -13,8 +13,8 @@ Before you begin, ensure you have the following installed:
 - IOS: 
 yarn -> 
 yarn pod -> 
-yarn start -> 
 yarn xcode -> 
+yarn start -> 
 command + B (run app)
 
 - Android:
