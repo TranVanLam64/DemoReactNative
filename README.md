@@ -3,7 +3,7 @@
 ## Prerequisites
 Before you begin, ensure you have the following installed:
 
-- **Node.js**
+- **Node.js** (version 18.*.*)
 - **Yarn**
 - **Xcode** (for iOS development)
 - **Android Studio** (for Android development)
